@@ -11,4 +11,5 @@ jobs:
     - name: Show environment
       run: |
         echo "$GITHUB_CONTEXT"
-      env: GITHUB_CONTEXT: ${{ toJSON(github) }}
+      env:
+        GITHUB_CONTEXT: ${{ toJSON(github) }}
