@@ -10,6 +10,5 @@ jobs:
     steps:
     - name: Show environment
       run: |
-        echo "$GITHUB_RUN_ID"
-        echo "$GITHUB_RUN_NUMBER"
-        echo "$GITHUB_RUN_ATTEMPT"
+        echo "${{ vars.VERSION_MAJOR }}.${{ vars.VERSION_MINOR }}.$GITHUB_RUN_NUMBER"
+        echo "${{ vars.VERSION_MAJOR }}.${{ vars.VERSION_MINOR }}.$GITHUB_RUN_NUMBER.$GITHUB_RUN_ATTEMPT"
