@@ -10,6 +10,6 @@ jobs:
     steps:
     - name: Show environment
       run: |
-        echo "$GITHUB_CONTEXT"
-      env:
-        GITHUB_CONTEXT: ${{ toJSON(github) }}
+        echo "$GITHUB_RUN_ID"
+        echo "$GITHUB_RUN_NUMBER"
+        echo "$GITHUB_RUN_ATTEMPT"
